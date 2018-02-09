@@ -3,30 +3,35 @@ import Description from './../src/components/Description'
 // Because this is a static component we just verify the results of h calls
 test('Description component renders', () => {
   expect(Description()).toEqual({
+    attributes: {},
     children: [
       {
-        children: ['hyperapp-one'],
-        name: 'h1',
-        props: {}
+        attributes: {},
+        children: ['hyperapp2000'],
+        key: null,
+        nodeName: 'h1'
       },
       {
+        attributes: {},
         children: [
           {
+            attributes: {},
             children: ['With JSX and Webpack'],
-            name: 'em',
-            props: {}
+            key: null,
+            nodeName: 'em'
           }
         ],
-        name: 'p',
-        props: {}
+        key: null,
+        nodeName: 'p'
       },
       {
+        attributes: {},
         children: [],
-        name: 'hr',
-        props: {}
+        key: null,
+        nodeName: 'hr'
       }
     ],
-    name: 'div',
-    props: {}
+    key: null,
+    nodeName: 'div'
   })
 })

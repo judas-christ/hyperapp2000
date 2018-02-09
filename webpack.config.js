@@ -1,5 +1,6 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 
 const plugins = [
@@ -11,13 +12,19 @@ const plugins = [
 ]
 
 module.exports = function webpackStuff(env) {
-  if (env === 'production') plugins.push(new MinifyPlugin())
+  if (env === 'production') {
+    plugins.push(
+      new UglifyJsPlugin({
+        parallel: 4
+      })
+    )
+  }
 
   return {
     entry: ['./src/index.ts', './styles/app.scss'],
     output: {
       filename: 'app.js',
-      path: path.resolve(__dirname, './')
+      path: path.resolve(__dirname, './public')
     },
     resolve: {
       extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js']
@@ -32,7 +39,7 @@ module.exports = function webpackStuff(env) {
         {
           test: /\.scss$/,
           use: ExtractTextPlugin.extract({
-            use: ['css-loader?importLoaders=1', 'sass-loader']
+            use: ['css-loader?importLoaders=1', 'postcss-loader', 'sass-loader']
           })
         }
       ]

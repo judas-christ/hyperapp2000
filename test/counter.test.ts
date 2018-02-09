@@ -17,8 +17,8 @@ test('Counter test', done => {
       'div',
       {
         oncreate() {
-          expect(!document.body.innerHTML.includes('0')).toBe(true)
-          expect(document.body.innerHTML.includes('1')).toBe(true)
+          expect(!document.body.innerHTML.includes('>0<')).toBe(true)
+          expect(document.body.innerHTML.includes('>1<')).toBe(true)
           done()
         }
       },
@@ -36,8 +36,8 @@ test('Counter test', done => {
       'div',
       {
         oncreate() {
-          expect(!document.body.innerHTML.includes('0')).toBe(true)
-          expect(document.body.innerHTML.includes('-1')).toBe(true)
+          expect(!document.body.innerHTML.includes('>0<')).toBe(true)
+          expect(document.body.innerHTML.includes('>-1<')).toBe(true)
           done()
         }
       },

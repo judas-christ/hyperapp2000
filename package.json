@@ -6,12 +6,6 @@
     "@types/jest": "^22.1.2",
     "autoprefixer": "7.1.6",
     "awesome-typescript-loader": "^3.4.1",
-    "babel-core": "6.26.0",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-loader": "7.1.2",
-    "babel-preset-react-app": "^3.1.1",
-    "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
     "css-loader": "0.28.7",
@@ -55,8 +49,12 @@
     "wipe": "rm -rf .git && git init && git commit -m \"Initial commit\""
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{ts,tsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{ts,tsx}"
@@ -66,10 +64,11 @@
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)":
-        "<rootDir>/config/jest/fileTransform.js"
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
     "moduleFileExtensions": [
       "web.js",
       "mjs",
@@ -80,17 +79,6 @@
       "node",
       "ts",
       "tsx"
-    ]
-  },
-  "babel": {
-    "presets": ["react-app"],
-    "plugins": [
-      [
-        "transform-react-jsx",
-        {
-          "pragma": "h"
-        }
-      ]
     ]
   },
   "eslintConfig": {

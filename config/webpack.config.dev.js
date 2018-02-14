@@ -145,18 +145,9 @@ module.exports = {
           {
             test: /\.tsx?$/,
             include: paths.appSrc,
-            loader: require.resolve('awesome-typescript-loader')
-          },
-          // Process JS with Babel.
-          {
-            test: /\.(js|jsx|mjs)$/,
-            include: paths.appSrc,
-            loader: require.resolve('babel-loader'),
+            loader: require.resolve('awesome-typescript-loader'),
             options: {
-              // This is a feature of `babel-loader` for webpack (not Babel itself).
-              // It enables caching results in ./node_modules/.cache/babel-loader/
-              // directory for faster rebuilds.
-              cacheDirectory: true
+              useCache: true
             }
           },
           // "postcss" loader applies autoprefixer to our CSS.

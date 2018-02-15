@@ -2,7 +2,6 @@ import { h } from 'hyperapp'
 import * as logo from './logo.svg'
 import './App.css'
 
-console.log('logo', logo)
 const App = (state, actions) => {
   return (
     <div class="App">

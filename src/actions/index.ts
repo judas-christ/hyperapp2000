@@ -1,3 +1,2 @@
-export default {
-  
-}
+// tslint:disable-next-line
+export default {}

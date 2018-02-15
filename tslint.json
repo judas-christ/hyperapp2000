@@ -1,0 +1,45 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-microsoft-contrib", "tslint-react", "tslint:latest"],
+  "jsRules": {},
+  "rules": {
+    "import-name": false,
+    "jsx-alignment": true,
+    "jsx-no-lambda": true,
+    "jsx-no-string-ref": true,
+    "jsx-no-multiline-js": true,
+    "jsx-self-close": true,
+    "member-access": false,
+    "missing-jsdoc": false,
+    "no-any": false,
+    "no-relative-imports": false,
+    "no-for-in-array": false,
+    "no-reserved-keywords": false,
+    "no-unused-variable": [true, "h"],
+    "react-tsx-curly-spacing": false,
+    "restrict-plus-operands": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "variable-name": [true, "ban-keywords"],
+    "await-promise": false,
+    "no-floating-promises": false,
+    "no-unsafe-any": false,
+    "promise-function-async": false,
+    "strict-boolean-expressions": false,
+    "completed-docs": false,
+    "no-unnecessary-qualifier": false,
+    "no-void-expression": false,
+    "semicolon": false,
+    "arrow-parens": false,
+    "no-default-export": false,
+    "no-console": false,
+    "no-import-side-effect": false
+  },
+  "rulesDirectory": []
+}

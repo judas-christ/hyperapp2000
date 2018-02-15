@@ -88,6 +88,7 @@ function checkValidServiceWorker(swUrl) {
       // Ensure service worker exists, and that we really are getting a JS file.
       if (
         response.status === 404 ||
+        // tslint:disable-next-line:no-backbone-get-set-outside-model
         response.headers.get('content-type').indexOf('javascript') === -1
       ) {
         // No service worker found. Probably a different app. Reload the page.

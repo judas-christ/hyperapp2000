@@ -35,6 +35,10 @@
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "ts-jest": "^22.0.4",
+    "tslint": "^5.9.1",
+    "tslint-loader": "^3.5.3",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "tslint-react": "^3.5.1",
     "typescript": "^2.7.1",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
@@ -49,8 +53,12 @@
     "wipe": "rm -rf .git && git init && git commit -m \"Initial commit\""
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{ts,tsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{ts,tsx}"
@@ -60,10 +68,11 @@
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)":
-        "<rootDir>/config/jest/fileTransform.js"
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
     "moduleFileExtensions": [
       "web.js",
       "mjs",
